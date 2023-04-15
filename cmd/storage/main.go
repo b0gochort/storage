@@ -13,6 +13,10 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	trstortedFile, err := st.GetByID(file.ID)
 
-	fmt.Println("it uploaded", file)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println("it uploaded", trstortedFile)
 }
